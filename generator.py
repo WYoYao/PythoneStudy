@@ -2,5 +2,35 @@
 
 print([y for y in (x * x for x in range(1,11))])
 
+def fib(max):
+    n,a,b=0,0,1
+    while n<max:
+        print(b)
+        a,b=b,a+b
+        n=n+1
+    return 'done'
 
-#http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014317799226173f45ce40636141b6abc8424e12b5fb27000
+# o=fib(6)
+
+def odd():
+    print('step 1')
+    yield 1
+    print('step 2')
+    yield 2
+    print('step 3')
+    yield 3
+
+# o=odd()
+
+# next(o)
+# next(o)
+# next(o)
+
+g=odd()
+while True:
+    try:
+        x=next(g)
+        print('g',x)
+    except StopIteration as e:
+        print('Generator return value:', e.value)
+        break
