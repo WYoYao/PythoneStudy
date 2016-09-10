@@ -75,3 +75,20 @@ leo=Student('leo',85)
 leo.print_level()
 
 '''
+
+'''
+# 同时我们也可以给类本身设置属性，类的属性在所有的实例都可以共同访问
+class Demo(object):
+    def __init__(self):
+        self.name='leo'
+    age={
+        'like':23
+    }
+d1=Demo()
+d2=Demo()
+print(d1.age['like'])
+print(d2.age['like'])
+d1.age['like']+=1
+print(d1.age['like'])
+print(d2.age['like'])
+'''
